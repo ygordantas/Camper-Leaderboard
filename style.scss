@@ -1,0 +1,98 @@
+$base: #efefef;
+$secondary: #006400;
+$secondary-light: #7FB17F;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color:  $base;
+  color: $secondary;
+  width: 100vw;
+}
+
+.container {
+font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.display-3 {
+  margin: 50px 0;
+}
+
+.camper-img {
+  height:50px;
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+}
+
+.btn {
+  margin: 30px;
+  cursor: pointer;
+  border: 1px solid $secondary;
+  
+  
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 1px 4px rgba($secondary, .8);
+  }
+  
+  &-custom{
+    background-color: $base;
+    
+    &:hover {
+      background-color: $secondary;
+      color: white;
+    }
+  }
+}
+
+.list-group-item {
+  width: 100%;
+  transition: all .3s;
+  color: $secondary;
+  
+  &:hover{
+    background-color: $secondary-light;
+    color: white;
+    transform: scale(1.02);
+    z-index: 100;
+  }
+  
+}
+
+.footer {
+  padding: 50px;
+  &-text {
+    color:black;
+    transition: all .2s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  &-link,
+  active,
+  visited {
+    text-decoration: none !important;
+    color:$secondary;
+    transition: all .2s;
+  }
+  &-link:hover {
+    color:$secondary-light;
+  }
+}
+
+@media (max-width: 700px) {
+  
+  .display-3 {
+    margin: 10px 0 ;
+    font-size:30px;
+  }
+  
+  .btn {
+    margin: 10px;
+  }
+  
+}
